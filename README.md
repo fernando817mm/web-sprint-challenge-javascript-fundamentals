@@ -29,13 +29,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.map is best for converting data and not effecting the original array. .forEach is best for previewing data.
+
 2. Explain the difference between a callback and a higher order function.
 
-3. Can you explain what a closure is and how you used it in the counter function? 
+Higher Order Functions take callbacks as arguments and callbacks are functions that will be arguments for HOF.
+
+3. Can you explain what a closure is and how you used it in the counter function?
+
+A closure is reaching out of the lexical scope. 
 
 4. Describe the four principles of the 'this' keyword.
 
+Principle 1 | Window Binding: when 'this' is not defined, this will return either undefined or the window (global object).
+
+Principle 2 | Implicit Binding: 'this' binds to anything left of the dot.
+
+Principle 3 | New Binding: when creating an object from the constructor function, 'this' binds to the new object variable.
+
+Principle 4 | Explicit Binding: .call, .apply, and Object.create must be used for 'this' to properly be inherited and bond to the Child Function. 
+
 5. Why do we need super() in an extended class?
+
+super() replaces .call, Object.create, and prototype. super()'s role is to inherit from the parent function and inherit the parent methods too.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
