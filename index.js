@@ -28,10 +28,10 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(num) {
   const arr = [];
-  for(let i = 0; i < num; i++){
+  for(let i = 0; i < num; i++){ // loops x times of num which creates an array from 1 - num
     arr.push(i + 1);
   }
-  return arr.reduce((acc, curr) => acc + curr, 0);
+  return arr.reduce((acc, curr) => acc + curr, 0); // reduce is working on arr created above
 }
 
 console.log(summation(4));
@@ -73,7 +73,7 @@ console.log(animalNames(zooAnimals));
   */
 
 function lowerCaseNames(arr){
-  return arr.map(element => element.animal_name.toLowerCase());
+  return arr.map(element => element.animal_name.toLowerCase()); // zooAnimals[i].animal_name.toLowerCase()
 }
 
 console.log(lowerCaseNames(zooAnimals));
@@ -84,7 +84,7 @@ console.log(lowerCaseNames(zooAnimals));
   */
 
 function lowPopulationAnimals(arr){
-  return arr.filter(element => element.population < 5 );
+  return arr.filter(element => element.population < 5 ); // if zooAnimals[i].population < 5 push it onto a new array
 }
 
 console.log(lowPopulationAnimals(zooAnimals));
@@ -144,7 +144,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
 
 
-
+//they're in arrow function already :) 👍
 
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
@@ -224,9 +224,9 @@ console.log(cuboidTwo.surfaceArea()); // 130
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
 
-class CubeMaker extends CuboidMaker{
+class CubeMaker extends CuboidMaker{ //extends tells it to inherit from CuboidMaker
   constructor(attr){
-    super(attr);
+    super(attr); // super tells it to inherit its information
   }
 }
 
