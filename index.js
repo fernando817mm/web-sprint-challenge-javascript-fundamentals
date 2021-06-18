@@ -17,9 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+//Closures are reaching out of the lexical scope. Since nestedFunction is inside of myFunction, it means it can reach out to get information inside of myFunction but myFunction can't reach inside of the nestedFunction to access things. 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -28,11 +26,15 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  const arr = [];
+  for(let i = 0; i < num; i++){
+    arr.push(i + 1);
   }
- 
+  return arr.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
